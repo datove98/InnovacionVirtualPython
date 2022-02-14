@@ -1,22 +1,28 @@
-tierra = 149597870
-jupiter = 778547200
+text = """Interesting facts about the Moon. The Moon is Earth's only satellite. There are several interesting facts about the Moon and how it affects life here on Earth. 
+On average, the Moon moves 4cm away from the Earth every year. This yearly drift is not significant enough to cause immediate effects on Earth. The highest daylight temperature of the Moon is 127 C."""
 
-distancia = jupiter - tierra
+dividirOracion = text.split(".")
+encontrarOracion = "The Moon is Earth's only satellite" in text
+palabras = ["average", "temperature", "distance"]
 
-distanciaEnMillas = distancia * 0.621
+for oracion in dividirOracion:
+    for palabra in palabras:
+        if palabra in oracion:
+            print(oracion)
 
-print(distancia)
-print(distanciaEnMillas)
+for oracion in dividirOracion:
+    for palabra in palabras:
+        if palabra in oracion:
+            print(palabra.replace(" C", "Celcius"))
 
-planeta1 = input("distancia desde el sol al primer planeta deseado?")
-planeta2 = input("distancia desde el sol al segundo planeta deseado?")
 
-valorPlaneta1 = int(planeta1)
-valorPlaneta2 = int(planeta2)
 
-distancia = valorPlaneta1 - valorPlaneta2
+name = "Moon"
+gravity = 0.00162 # in kms
+planet = "Earth"
 
-distanciaEnMillas = distancia * 0.621
-
-print(abs(distanciaEnMillas))
-
+print(f'la gravedad de la tierra es de {gravity}')
+plantilla = "acerca de la gravedad \n nombre del planeta:{planeta} \n gravedad:{gravedad} m/s2 nombre:{nombre} "
+gravedadMetros = gravity * 1000
+print(plantilla.format(planeta = planet,gravedad = gravedadMetros,nombre = name))
+print(f"acerca de la gravedad \n nombre del planeta: {planet} \n gravedad: {gravity *1000} m/s2 nombre: {name}")

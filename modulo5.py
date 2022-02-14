@@ -1,18 +1,22 @@
-planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Neptune']
-planets.append("pluton")
-print("hay " , str(len(planets)) , "planetas incluido " , str(planets[-1]))
+tierra = 149597870
+jupiter = 778547200
 
-planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Neptune']
-busqueda = input("planeta a buscar ")
+distancia = jupiter - tierra
 
-posicionPlaneta = planets.index(busqueda)
+distanciaEnMillas = distancia * 0.621
 
-planeta = planets[posicionPlaneta]
+print(distancia)
+print(distanciaEnMillas)
 
-print("estos son los planetas mas cercanos a", planeta)
+planeta1 = input("distancia desde el sol al primer planeta deseado?")
+planeta2 = input("distancia desde el sol al segundo planeta deseado?")
 
-print(planets[0:posicionPlaneta])
+valorPlaneta1 = int(planeta1)
+valorPlaneta2 = int(planeta2)
 
-print("estos son los planetas mas lejanos a", planeta)
+distancia = valorPlaneta1 - valorPlaneta2
 
-print(planets[posicionPlaneta + 1:])
+distanciaEnMillas = distancia * 0.621
+
+print(abs(distanciaEnMillas))
+
